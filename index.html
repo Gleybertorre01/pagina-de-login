@@ -1,0 +1,120 @@
+<!DOCTYPE html> 
+<!-- Diz ao navegador que o documento é HTML5 -->
+
+<html lang="pt">
+<!-- Define o idioma principal da página como português -->
+
+<head>
+    <meta charset="UTF-8">
+    <!-- Permite usar acentos e caracteres especiais (ç, ã, é) -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Faz o site se adaptar ao celular (responsivo) -->
+
+    <title>Tarefa Criar Formulário</title>
+    <!-- Título que aparece na aba do navegador -->
+
+    <link rel="stylesheet" href="style.css">
+    <!-- Importa o arquivo de CSS externo (estilo.css) para estilizar a página -->
+</head>
+
+<body>
+<!-- Tudo que aparece na tela do usuário fica dentro do body -->
+
+<h1>Página de Teste - Formulário</h1>
+<!-- Título principal da página -->
+
+<h2>Área de Cadastro</h2>
+<!-- Subtítulo da sessão de cadastro -->
+
+<form>
+<!-- Início do formulário de cadastro -->
+
+    <!-- Cada label explica qual é o campo -->
+    <label class="label">Nome Completo
+        <input class="input" type="text" name="nome">
+        <!-- type="text" → campo de digitação comum -->
+        <!-- name="nome" → nome do campo para envio dos dados -->
+    </label><br>
+
+    <label class="label">Email
+        <input class="input" type="email" name="email">
+        <!-- type="email" → valida automaticamente se o email é válido -->
+    </label><br>
+
+    <label class="label">Senha
+        <input class="input" type="password" name="senha">
+        <!-- type="password" → esconde os caracteres digitados -->
+    </label><br>
+
+    <label class="label">confirmação de Senha
+        <input class="input" type="password" name="senha">  </label><br>
+
+    <label>
+    <input type="radio" name="sexo" value="feminino"> Feminino
+</label>
+
+<label>
+    <input type="radio" name="sexo" value="masculino"> Masculino
+</label>
+
+<br><br> <!-- Espaçamento extra -->
+
+
+
+    <label class="label">Data de nascimento
+        <input class="input" type="datetime-local" name="nascimento">
+        <!-- Abre calendário + horário -->
+    </label><br>
+
+    <label class="label">Qual sua cor favorita
+        <input class="input" type="color" name="cor_preferida">
+        <!-- type="color" → abre seletor de cores -->
+    </label><br>
+
+    <label class="label">Você tem experiência na área de tecnologia?
+        <!-- Pergunta com menu para escolher uma opção -->
+
+        <select class="input" name="experiencia">
+            <!-- select → cria uma lista de opções -->
+            <!-- name="experiencia" → nome do campo para envio -->
+
+            <option value="">Selecione...</option>
+            <!-- Opção inicial vazia -->
+
+            <option value="sim">Tenho experiência</option>
+            <!-- value="sim" → valor enviado ao servidor -->
+
+            <option value="nao">Não tenho experiência</option>
+            <!-- value="nao" → valor enviado ao servidor -->
+        </select>
+    </label><br>
+
+    <button type="submit">Fazer Cadastro</button>
+    <!-- Botão que envia os dados do formulário -->
+</form>
+
+<h3>Área de Login</h3>
+<!-- Título da área de login -->
+
+<form action="paginalogin.html" method="post">
+<!-- action="paginalogin.html" → página que vai receber os dados -->
+<!-- method="post" → envia informações de forma segura -->
+
+    <label class="label">Email
+        <input class="input" type="text" name="email">
+        <!-- Campo de email para login -->
+    </label><br>
+
+    <label class="label">Senha
+        <input class="input" type="password" name="senha">
+        <!-- type="password" → mantém a senha escondida -->
+
+    </label><br>
+
+    <button type="submit">Entrar</button>
+    <!-- Botão que envia o login -->
+</form>
+
+</body>
+</html>
